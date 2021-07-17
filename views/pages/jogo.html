@@ -38,7 +38,7 @@
         if(cobra[0][0]<0||cobra[0][1]<0||cobra[0][0]>9||cobra[0][1]>9)vivo=false;
         document.getElementById('td'+cobra[0][0]+'_'+cobra[0][1]).style.background="#333333";//cor da cobra
         document.getElementById('td'+mx+'_'+my).style.background="#ff3333";//cor da maçã
-        if(vivo)setTimeout('anda()',150);//velocidade da cobra
+        if(vivo)setTimeout('anda()', velocidade*100);//velocidade da cobra
         else alert('Fim de jogo');
     }
     anda();
@@ -48,6 +48,14 @@
         if(tecla==38)direcao=1;
         if(tecla==39)direcao=2;
         if(tecla==40)direcao=3;
+    }
+    function atualizarVelocidade(){
+        velocidade = prompt("Insira um número abaixo de 5");
+        if(isNaN(velocidade)==true && velocidade > 5 && velocidade < 1){
+            alert("Insira um número válido!")
+            atualizarVelocidade();
+        }
+        velocidade=parseInt(velocidade);
     }
     function reiniciarJogo(){
         document.getElementById('principal').innerHTML=tabuleiro+"</table>";
