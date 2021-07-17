@@ -36,8 +36,8 @@
         if(direcao==3)cobra[0][0]++;
         for(x=1;x<cobra.length;x++)if(cobra[0][0]==cobra[x][0]&&cobra[0][1]==cobra[x][1])vivo=false;
         if(cobra[0][0]<0||cobra[0][1]<0||cobra[0][0]>9||cobra[0][1]>9)vivo=false;
-        document.getElementById('td'+cobra[0][0]+'_'+cobra[0][1]).style.background="#333333";//cor da cobra
-        document.getElementById('td'+mx+'_'+my).style.background="#ff3333";//cor da maçã
+        document.getElementById('td'+cobra[0][0]+'_'+cobra[0][1]).style.background="#006400";//cor da cobra
+        document.getElementById('td'+mx+'_'+my).style.background="#6959CD";//cor da maçã
         if(vivo)setTimeout('anda()',200);//velocidade da cobra
         else alert('Fim de jogo');
     }
