@@ -49,6 +49,15 @@
         if(tecla==39)direcao=2;
         if(tecla==40)direcao=3;
     }
+    function reiniciarJogo(){
+        document.getElementById('principal').innerHTML=tabuleiro+"</table>";
+        cobra=[[5,5]];
+        direcao=2;
+        mx=parseInt(Math.random()*10);
+        my=parseInt(Math.random()*10);
+        vivo=true;
+        anda();
+    }
 </script>
 </body>
 </html>
