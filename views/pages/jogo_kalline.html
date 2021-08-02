@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <style>
+            body{
+                background-image: url("sprite-snake.jpg");
+            }
+        </style>
+    </head>
 <body onKeyDown="pegadirecao(event.keyCode);">
 
 <h2 align="center">Kalline Freitas</h2>
@@ -20,7 +27,7 @@
     my=parseInt(Math.random()*10);
     vivo=true;
     function anda(){
-        document.getElementById('td'+cobra[cobra.length-1][0]+'_'+cobra[cobra.length-1][1]).style.background="#ffffff";
+        document.getElementById('td'+cobra[cobra.length-1][0]+'_'+cobra[cobra.length-1][1]).style.background="black";
         if(mx==cobra[cobra.length-1][0]&&my==cobra[cobra.length-1][1]){
             mx=parseInt(Math.random()*10);
             my=parseInt(Math.random()*10);
